@@ -59,7 +59,15 @@ const Creator = {
     console.log(`Alice is ready to accept Attachers...`);
     // startBobs();
   },
-  log: (c, a) => console.log(`Alice accepts this attacher: ${c}, ${stdlib.bigNumberToNumber(a)}`)
+  log: (c, a) => {
+    if(a <= 5){
+      console.log(`Attacher: ${c}, ${stdlib.bigNumberToNumber(a)}`)
+    }
+    else{
+      console.log(`max number reached`)
+      process.exit(0)
+    }
+  } 
 // });
 
 }
